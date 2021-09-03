@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AboutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +20,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('about',function(){
-    echo 'this is a about';
-});
-
+Route::get('about',[AboutController::class,'index']);
+Route::get('about/history',[AboutController::class,'myHistory']);
 Route::get('contact', function () {
     return [
         'name'=>'hello'
     ];
 });
+
+

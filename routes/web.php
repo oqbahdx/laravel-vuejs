@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TodoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,4 @@ Route::get('contact', function () {
 });
 
 
+Route::get('todos',[TodoController::class,'index']);

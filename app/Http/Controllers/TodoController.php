@@ -14,6 +14,14 @@ class TodoController extends Controller
        ]);
     }
 
+    public function show(Todo $todo){
+
+        return view('todos.todo',)->with([
+            'todo'=>$todo
+        ]);
+
+    }
+
     public function store(Request $request){}
 
     public function update($id,Request $request){}

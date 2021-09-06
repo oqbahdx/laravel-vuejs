@@ -1,15 +1,15 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todos Page</title>
-</head>
-<body>
+  @extends('layouts.master')
+
+@section('title')
+  My Todos
+@endsection
+
+  @section('content')
+
+
     <ul>
         @foreach ($todos as $todo)
-           <h1> <li>{{$todo->content}}</li> </h1>
+           <h1> <li> <a href="{{route('todo',['todo'=>$todo->id])}}">{{$todo->content}}</a> </li> </h1>
         @endforeach
     </ul>
-</body>
-</html>
+    @endsection

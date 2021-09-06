@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+
+    protected $fillable = [
+        'user_id','content','completed'
+    ];
 }

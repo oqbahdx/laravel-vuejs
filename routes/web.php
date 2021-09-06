@@ -31,6 +31,7 @@ Route::get('contact', function () {
 });
 
 
-Route::get('todos',[TodoController::class,'index']);
-
+Route::get('todos',[TodoController::class,'index'])->name('todos');
+Route::post('todos',[TodoController::class,'store']);
+Route::get('todos/new',[TodoController::class,'edit']);
 Route::get('todos/{todo}',[TodoController::class,'show'])->name('todo');
